@@ -1,0 +1,49 @@
+@font-face {
+  font-family: "Cinzel";
+  src: url(./assets/fonts/Cinzel-VariableFont_wght.ttf) format('truetype');
+  font-display: swap;
+} 
+
+*{
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  color: white;
+}
+
+body{
+  background-color: black;
+}
+
+@view-transition{
+  navigation: auto;
+}
+
+::view-transition-old(image-*), ::view-transition-new(image-*) {
+  animation: none;
+  mix-blend-mode: normal;
+  height: 100%;
+}
+
+::view-transition-old(image-flower),
+::view-transition-new(image-flower),
+::view-transition-old(image-flowers),
+::view-transition-new(image-flowers),
+::view-transition-old(image-black-forrest),
+::view-transition-new(image-black-forrest),
+::view-transition-old(image-castle),
+::view-transition-new(image-castle),
+::view-transition-old(image-cherry-blossom),
+::view-transition-new(image-cherry-blossom),
+::view-transition-old(image-cosmos),
+::view-transition-new(image-cosmos),
+::view-transition-old(image-galaxy),
+::view-transition-new(image-galaxy),
+::view-transition-old(image-japan),
+::view-transition-new(image-japan),
+::view-transition-old(image-lake),
+::view-transition-new(image-lake) {
+  object-fit: cover;
+  overflow: clip;
+}
+
