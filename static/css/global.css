@@ -19,11 +19,6 @@ body{
   navigation: auto;
 }
 
-::view-transition-old(image-*), ::view-transition-new(image-*) {
-  animation: none;
-  mix-blend-mode: normal;
-  height: 100%;
-}
 
 ::view-transition-old(image-flower),
 ::view-transition-new(image-flower),
@@ -42,7 +37,27 @@ body{
 ::view-transition-old(image-japan),
 ::view-transition-new(image-japan),
 ::view-transition-old(image-lake),
-::view-transition-new(image-lake) {
+::view-transition-new(image-lake),
+::view-transition-old(image-world-map),
+::view-transition-new(image-world-map),
+::view-transition-old(image-dart),
+::view-transition-new(image-dart),
+::view-transition-old(image-night-sky),
+::view-transition-new(image-night-sky),
+::view-transition-old(image-ocean),
+::view-transition-new(image-ocean),
+::view-transition-old(image-fire),
+::view-transition-new(image-fire),
+::view-transition-old(image-humingbird),
+::view-transition-new(image-humingbird),
+::view-transition-old(image-tokyo),
+::view-transition-new(image-tokyo),
+::view-transition-old(image-shanghai-shi),
+::view-transition-new(image-shanghai-shi),
+::view-transition-old(image-owl),
+::view-transition-new(image-owl),
+::view-transition-old(image-art),
+::view-transition-new(image-art) {
   object-fit: cover;
   overflow: clip;
 }
