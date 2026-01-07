@@ -36,7 +36,7 @@
         <h1 bind:this={title}>{item.title}</h1>
         <h2 bind:this={title2}>{item.description}</h2>
     </div>
-    <img id="{item.slug}" style="view-transition-name: image-{item.slug}" src="{item.image}" alt="">
+    <img id="to" style="view-transition-name: image-{item.slug}" src="{item.image}" alt="">
 </div>
 {/if}
 
