@@ -3,18 +3,32 @@
     import {onMount} from "svelte";
     import { gsap } from "gsap";
 
+    let { altcolor = false,
+         secondcolor = 'green',
+     } = $props();
+
+     let altactive = $derived(altcolor);
+
+    const handleTheme = () => {
+        altactive = !altactive;
+        const color = altactive ? (altcolor || 'black') : 'white';
+        document.documentElement.style.setProperty('--altcolor', color);
+    }
+
+
+
     onMount(() => {
 
-      const image = document.querySelectorAll('img');
+    const image = document.querySelectorAll('img');
 
 		const observer = new IntersectionObserver((entries) => { 
         entries.forEach(entry => {
-          if (entry.isIntersecting) {
-                      const tl = gsap.timeline();
-                      let xory = Math.random() > 0.5 ? 'x' : 'y';
-                      console.log(xory);
-                      let negativeornot = Math.random() > 0.5 ? '-' : ''
-                      console.log(negativeornot);
+        if (entry.isIntersecting) {
+                    const tl = gsap.timeline();
+                    let xory = Math.random() > 0.5 ? 'x' : 'y';
+                    console.log(xory);
+                    let negativeornot = Math.random() > 0.5 ? '-' : ''
+                    console.log(negativeornot);
 
 					tl.fromTo(
 						entry.target,
@@ -22,10 +36,10 @@
 						{ [xory]: `${negativeornot}0`, opacity: 1, duration: 0.8, ease: 'power3.out' }
 					);
         } else {
-          gsap.killTweensOf(entry.target);
-          gsap.set(entry.target, {opacity: 0, x: 0, y: 0, ease: 'power3.out'})
+        gsap.killTweensOf(entry.target);
+        gsap.set(entry.target, {opacity: 0, x: 0, y: 0, ease: 'power3.out'})
         }
-      });               
+    });               
 		}, { threshold: 0.1 });
 
 		image.forEach(img => observer.observe(img));
@@ -35,6 +49,9 @@
 
 </script>
 
+<button onclick={handleTheme}>change theme</button>
+
+<h3>here is the gallary</h3>
 
     <ul>
         {#each slidecontent as slide}
@@ -87,7 +104,16 @@
 </div> -->
 
 <style>
-    
+
+:root{
+    --altcolor: black;
+}
+
+h3{
+    text-align: center;
+    margin: 2em 0;
+    color: var(--altcolor);
+}
 a {
   text-decoration: none;
   pointer-events: all;

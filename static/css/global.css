@@ -63,7 +63,13 @@ body{
 ::view-transition-old(image-owl),
 ::view-transition-new(image-owl),
 ::view-transition-old(image-art),
-::view-transition-new(image-art) {
+::view-transition-new(image-art),
+::view-transition-old(image-penguin),
+::view-transition-new(image-penguin),
+::view-transition-old(image-farm),
+::view-transition-new(image-farm),
+::view-transition-old(image-barn),
+::view-transition-new(image-barn) {
   
   mix-blend-mode: normal;
 
@@ -91,8 +97,12 @@ body{
 #to::view-transition-new(image-tokyo),
 #to::view-transition-new(image-shanghai-shi),
 #to::view-transition-new(image-owl),
-#to::view-transition-new(image-art) {
+#to::view-transition-new(image-art),
+#to::view-transition-new(image-penguin),
+#to::view-transition-new(image-farm),
+#to::view-transition-new(image-barn) {
   object-fit: cover;
 }
+
 
 

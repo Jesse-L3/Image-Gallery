@@ -22,6 +22,10 @@ import ShanghaiShi from '$lib/images/Shanghai-Shi.jpg';
 import owl from '$lib/images/owl.jpg';
 import art from '$lib/images/art.jpg';
 
+import penguin from '$lib/images/penguin.jpeg';
+import farm from '$lib/images/farm.jpg';
+import barn from '$lib/images/barn.jpeg';
+
 
 export const slidecontent = [
     {
@@ -172,4 +176,25 @@ export const slidecontent = [
         image: art,
         description: "A beautiful piece of art",
     },
+    {
+        id: 21,
+        slug: "penguin",
+        title: "Penguin",
+        image: penguin,
+        description: "Rond en dik",
+    },
+    {
+        id: 22,
+        slug: "farm",
+        title: "Farm",
+        image: farm,
+        description: "A peaceful farm scene",
+    },
+    {
+        id: 23,
+        slug: "barn",
+        title: "Barn",
+        image: barn,
+        description: "A rustic barn in the countryside",
+    }
 ];

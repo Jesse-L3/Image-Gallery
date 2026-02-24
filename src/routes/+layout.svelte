@@ -2,7 +2,7 @@
     import { run } from 'svelte/legacy';
 	import { onNavigate } from "$app/navigation";
     import { navigating } from '$app/stores';
-	let { children } = $props();
+	let { children , altcolor = 'white' } = $props();
 
 
       onNavigate((navigation) => {
